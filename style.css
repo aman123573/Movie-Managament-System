@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@300&family=Poppins:wght@400;500&family=Source+Code+Pro:wght@300&family=Ubuntu:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background-color: rgb(33, 179, 236); */
+    background-image: linear-gradient(to bottom , rgb(17, 152, 206),rgb(152, 215, 240));
+    /* background: linear-gradient(rgb(33, 179, 236),rgb(103, 198, 236)); */
+}
+
+.navbar {
+    /* background-color: white; */
+    max-width: 90%;
+    margin: auto;
+    
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+    box-shadow: 3px 3px 10px 0px gray;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.889);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    margin: 23px;
+    /* border: 2px solid black; */
+    padding: 15px;
+}
+
+.navbar ul li a:hover {
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.new-movie-button {
+    border: 1px solid black;
+    max-width: 21%;
+    margin: auto;
+    text-align: center;
+    padding: 23px;
+    margin: 23px auto;
+    border-radius: 10px;
+    transition: all .4s ease-in;
+}
+
+.new-movie-button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Form section */
+
+.form-section {
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 3px 10px 0px gray;
+    padding: 10px;
+    position: relative;
+    bottom: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .57s ease-in;
+}
+
+.title {
+    background-color: #9490ff;
+    width: 100%;
+    text-align: center;
+}
+
+.details {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emoji {
+    border: 2px solid black;
+    padding: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+input {
+    font-size: 1rem;
+    padding: 5px 10px;
+    width: 30rem;
+    outline: none;
+}
+
+select {
+    font-size: 1rem;
+    padding: 5px 10px;
+    width: 30rem;
+    outline: none;
+}
+
+textarea {
+    font-size: 1rem;
+    padding: 5px 10px;
+    width: 30rem;
+    outline: none;
+    height: 114px;
+}
+
+button {
+    font-size: 1.2rem;
+    margin: 10px;
+    width: 50%;
+    margin: 10px auto;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #9490ff;
+    border: 1px solid #9490ff;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #7a76f9;
+    color: #fff;
+}
+
+.fa-xmark {
+    position: relative;
+    left: 81%;
+    cursor: pointer;
+}
+
+
+/* Class for toggling */
+
+.active {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.popup {
+    visibility: visible;
+    opacity: 1;
+    transition: .57s ease-in;
+    position: sticky;
+}
+
+.cut-section {
+    /* position: fixed; */
+    position: sticky;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .57s ease-in;
+}
+
+.cut-popup {
+    visibility: visible;
+    opacity: 1;
+    transition: .57s ease-in;
+}
+
+
+/* Added movie details css */
+
+#movie-details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    gap: 10px;
+}
+
+.movie-details {
+    /* border: 2px solid black; */
+    width: 80%;
+    padding: 15px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background: radial-gradient(#9490ff, transparent); */
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+}
+
+.checked {
+    color: rgb(0, 255, 102);
+}

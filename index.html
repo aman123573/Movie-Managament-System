@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">All movies</a></li>
+                <li><a href="#" id="actionBtn">Action</a></li>
+                <li><a href="#" id="dramaBtn">Drama</a></li>
+                <li><a href="#" id="romanceBtn">Romance</a></li>
+                <li><a href="#" id="horrorBtn">Horror</a></li>
+                <li><a href="#" id="comedyBtn">Comedy</a></li>
+            </ul>
+        </nav>
+
+        <section class="new-movie-button" id="add-new">
+            <i class="fa-solid fa-video"></i>
+            <span>Add movie</span>
+        </section>
+
+        <div id="movie-details-container">
+
+        </div>
+
+    </div>
+
+    <!-- <div class="cut-section" id="cut-mark">
+        <i class="fa-solid fa-xmark fa-2x"></i>
+    </div> -->
+
+    <div class="form-section" id="popup">
+        <div class="title">
+            <h2>Enter movie credentials</h2>
+        </div>
+        <div class="details">
+            <div class="emoji">
+                <i class="fa-solid fa-10x" id="smile"></i>
+                <!-- <i class="fa-solid fa-face-grin-tongue-squint fa-10x"></i> -->
+            </div>
+
+
+            <form action="">
+                <label for="name">Enter name</label>
+                <input type="text" name="name" id="movieName" placeholder="enter name">
+                <label for="genre">Choose genre</label>
+                <select name="genre" id="genre">
+                    <option value="">--Select a genre--</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="horror">Horror</option>
+                    <option value="romance">Romance</option>
+                    <option value="action">Action</option>
+                    <option value="drama">Drama</option>
+                </select>
+                <label for="genre">Select rating</label>
+                <select name="rating" id="rating">
+                    <option value="">--Choose rating--</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="4">5</option>
+                </select>
+                <label for="desc">Enter description</label>
+                <textarea name="desc" id="description" cols="30" rows="10"
+                    placeholder="Description or summary of the movie"></textarea>
+                <button type="submit" class="submit" id="submitBtn">Add movie</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1684d5231a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
