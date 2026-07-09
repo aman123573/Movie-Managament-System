@@ -12,7 +12,6 @@ let iconClass;
 selectedGenre.addEventListener('click', () => {
 
     selectedGenreText = (selectedGenre[selectedGenre.selectedIndex].text).toLowerCase();
-    // console.log(selectedGenreText);
 
     // icons for the different genre
     let smile = document.getElementById('smile');
@@ -79,7 +78,6 @@ btn.addEventListener('click', e => {
     let description = descVal.value;
     let changeRatingToNumber = parseInt(selectedRating[selectedRating.selectedIndex].text);
 
-    // console.log(selectedGenre[selectedGenre.selectedIndex].text)
 
     let uniqueMovieId = Date.now(); // Generate a unique ID using the current timestamp
 
@@ -102,8 +100,8 @@ btn.addEventListener('click', e => {
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
             <h5 class="desc-credentials">
-    ${selectedGenre[selectedGenre.selectedIndex].text}
-</h5>
+                    ${selectedGenre[selectedGenre.selectedIndex].text}
+            </h5>
         </div>
     </div>
     `;
