@@ -101,7 +101,9 @@ btn.addEventListener('click', e => {
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
-            <h5 class="desc-credentials" id="desc-credentials">${selectedGenre[selectedGenre.selectedIndex].text}</h5>
+            <h5 class="desc-credentials">
+    ${selectedGenre[selectedGenre.selectedIndex].text}
+</h5>
         </div>
     </div>
     `;
@@ -129,28 +131,29 @@ btn.addEventListener('click', e => {
 //Get all the navbar buttons to filter the genre
 const anchorTags = document.querySelectorAll('a');
 
+
 anchorTags.forEach(element => {
     element.addEventListener('click', (e) => {
-        e.preventDefault()
-        const searchKey = e.target.text;
+        e.preventDefault();
+
+        const searchKey = e.target.text.toLowerCase();
 
         const movieDetails = document.querySelectorAll('.movie-details');
+
         movieDetails.forEach((movie) => {
-            const movieDesc = document.getElementById('desc-credentials');
+
+            const movieDesc = movie.querySelector('.desc-credentials');
             const movieDescText = movieDesc.textContent.toLowerCase();
 
-            console.log(searchKey.toLowerCase());
-            console.log(movieDescText);
-
-
-
-            if (movieDescText.includes(searchKey.toLowerCase())) {
-                movie.style.display = 'block';
+            if (searchKey === "all movies") {
+                movie.style.display = "block";
+            }
+            else if (movieDescText.includes(searchKey)) {
+                movie.style.display = "block";
             }
             else {
-                movie.style.display = 'none';
+                movie.style.display = "none";
             }
-        })
-    })
-
+        });
+    });
 });

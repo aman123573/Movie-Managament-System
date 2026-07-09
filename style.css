@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:wght@300&family=Poppins:wght@400;500&family=Source+Code+Pro:wght@300&family=Ubuntu:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     /* background-color: rgb(33, 179, 236); */
-    background-image: linear-gradient(to bottom , rgb(17, 152, 206),rgb(152, 215, 240));
+    background-image: linear-gradient(to bottom, rgb(17, 152, 206), rgb(152, 215, 240));
     /* background: linear-gradient(rgb(33, 179, 236),rgb(103, 198, 236)); */
 }
 
@@ -16,7 +17,7 @@ body {
     /* background-color: white; */
     max-width: 90%;
     margin: auto;
-    
+    margin-top: 23px;
 }
 
 .navbar ul {
